@@ -1,0 +1,2 @@
+training:
+loc1: pixel-38 (the edge of the completely solid shape is either left or right of this pixel-> this pixel is always border gray)

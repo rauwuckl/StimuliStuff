@@ -55,14 +55,17 @@ def main():
     print("All done")
 
 def move_image(imagepath, displace, display=False):
+    displace = int(displace)
+    print(displace)
     img = mpimg.imread(imagepath)
     newimg = np.empty(img.shape)
 
+    print(img.shape)
 
     height, width, depth = img.shape
     if width%2 != 0:
         raise ValueError("Image does not have even width")
-    middle = width/2
+    middle = int(width/2)
 
     newimg[:, :displace, :] = img[:, middle-displace: middle, :]
     newimg[:, displace:middle, :] = img[:, :middle-displace, :]

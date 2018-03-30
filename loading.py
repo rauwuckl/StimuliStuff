@@ -32,8 +32,7 @@ def save_img(filename, img):
 
     result = np.stack([img, img, img, ones], axis=2)
 
-    return result
-    mpimg.imsave(filename, img)
+    mpimg.imsave(filename, result)
 
 
 
